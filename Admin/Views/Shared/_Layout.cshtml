@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] -  Administration Panel</title>
+
+    <!-- Core Style -->
+    <link rel="stylesheet" href="~/css/en/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/en/general.min.css">
+
+    <!-- fonts style -->
+    <link href="/css/css.css" rel="stylesheet">
+    <link href="/css/css2.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/metismenu/dist/metisMenu.min.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/daterangepicker/daterangepicker.css" />
+
+    <link href="~/lib/froala-wysiwyg-editor/css/froala_style.css" rel="stylesheet" />
+    <link href="~/lib/froala-wysiwyg-editor/css/froala_editor.pkgd.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/codemirror/codemirror.min.css">
+
+    <link href="~/lib/froala-wysiwyg-editor/css/plugins/code_view.min.css" rel="stylesheet" />
+
+    <link href="~/lib/dropzone/dist/basic.css" rel="stylesheet" />
+    <link href="~/lib/dropzone/dist/dropzone.css" rel="stylesheet" />
+    <link href="~/lib/datatables/media/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/lib/datatables/media/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/lib/datatables/media/css/select.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="~/lib/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="~/lib/select2/dist/css/select2-bootstrap4.min.css" rel="stylesheet">
+    <link href="~/lib/selectize/dist/css/selectize.css" rel="stylesheet">
+    <link href="~/lib/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/lightgallery/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="~/lib/morris/morris.css">
+    <link rel="stylesheet" href="~/lib/alertify-js/build/css/alertify.min.css">
+    <link rel="stylesheet" href="~/css/en/style.min.css" asp-append-version="true">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main-sidebar">
+            <partial name="_main-sidebar" />
+
+        </div>
+        <div class="main-content">
+            <!-- Breadcrumb -->
+            @if (ViewData["noBreadcrumb"] == null)
+            {
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item home" aria-current="page">
+                            <i class="fa fa-home" aria-hidden="true"></i> <a href="/">Home</a>
+                        </li>
+
+
+                        @if (ViewData["Title"] != null && ViewData["Main"] != null)
+                        {
+                            <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+                        }
+
+                    </ol>
+                </nav>
+            }
+            @RenderBody()
+
+        </div>
+        <div class="main-footer d-flex align-items-center justify-content-center">
+           
+        </div>
+    </div>
+
+
+    <!-- Core JS -->
+    <script src="~/lib/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    <!-- Vendors JS -->
+    <script src="~/lib/svg-injector/svg-injector.min.js"></script>
+    <script src="~/lib/jQuery-slimScroll/jquery.slimscroll.js"></script>
+    <script src="~/lib/metismenu/dist/metisMenu.min.js"></script>
+    <script type="text/javascript" src="~/lib/moment/moment.js"></script>
+    <script type="text/javascript" src="~/lib/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="~/lib/froala-wysiwyg-editor/js/froala_editor.pkgd.min.js"></script>
+    <!-- Code Mirror JS files. -->
+    <script type="text/javascript" src="~/lib/codemirror/codemirror.min.js">
+    </script>
+    <script type="text/javascript" src="~/lib/codemirror/xml.min.js">
+    </script>
+
+    <!-- Include the plugin JS file. -->
+    <script src="~/lib/froala-wysiwyg-editor/js/plugins/code_view.min.js"></script>
+
+
+    <script src="~/lib/dropzone/dist/dropzone.js"></script>
+    <script src="~/lib/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="~/lib/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/lib/datatables/media/js/dataTables.buttons.min.js"></script>
+    <script src="~/lib/datatables/media/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/lib/datatables/media/js/jszip.min.js"></script>
+    <script src="~/lib/datatables/media/js/buttons.print.min.js"></script>
+    <script src="~/lib/datatables/media/js/buttons.html5.min.js"></script>
+    <script src="~/lib/datatables/media/js/dataTables.select.min.js"></script>
+    <script src="~/js/spark.froala.js" asp-append-version="true"></script>
+
+    <script src="~/js/spark.dropzone.js" asp-append-version="true"></script>
+    <script src="/js/sweetalert.min.js"></script>
+
+    <script src="~/js/spark.datatables.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/lib/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/lib/selectize/dist/js/standalone/selectize.min.js"></script>
+    <script src="~/lib/jquery-steps/jquery.steps.min.js"></script>
+    <script src="~/lib/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="~/lib/bootstrap-birthday/dist/bootstrap-birthday.min.js"></script>
+    <script src="~/lib/lightgallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="~/lib/"></script>
+    <script src="~/lib/raphael/raphael-min.js"></script>
+    <script src="~/lib/morris/morris.min.js"></script>
+    <script src="/lib/alertify-js/build/alertify.js"></script>
+    <script src="~/js/script.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

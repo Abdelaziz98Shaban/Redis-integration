@@ -1,0 +1,40 @@
+﻿
+.pointer {
+    cursor: pointer;
+}
+
+.input-validation-error {
+    border-color: #cb4764 !important;
+    padding-right: calc(1.4em + .75rem) !important;
+    /*background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23cb476…%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E); background-repeat: no-repeat;
+    background-position: center right calc(.35em + .1875rem);*/
+    background-size: calc(.7em + .375rem) calc(.7em + .375rem) !important;
+}
+
+.alertify .ajs-header {
+    color: #fff;
+    background: #cc3a5e;
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #cc3a5e !important;
+}
+
+
+
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-cancel {
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+
+
+@media screen and (max-width: 320px) {
+    .container-login .wrap-login a {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

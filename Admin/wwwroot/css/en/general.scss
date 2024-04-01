@@ -1,0 +1,153 @@
+@import './_settings';
+@import './_mixin';
+
+/* Sticky footer styles
+-------------------------------------------------- */
+// html,
+// body {
+//     height: 100%;
+// }
+
+// #wrap {
+//     min-height: 100%;
+//     height: auto;
+//     margin: 0 auto;
+//     margin-bottom: -$footer-height;
+//     padding: 0 0 $footer-height;
+// }
+
+// #footer {
+//     min-height: $footer-height;
+// }
+
+// @include respond-below (lg){
+//     #wrap {
+//         min-height: auto;
+//         height: auto;
+//         margin: 0 auto;
+//         margin-bottom:0;
+//         padding: 0 ;
+//     }
+
+//     #footer {
+//         min-height: auto;
+//     }
+// }
+
+/* Direction
+-------------------------------------------------- */
+#wrap {
+    direction: ltr;
+}
+
+#footer {
+    direction: ltr;
+}
+
+/* Container Width
+-------------------------------------------------- */
+.container {
+    width: 100%;
+    max-width: $big-container;
+
+}
+
+
+/* Section Padding
+-------------------------------------------------- */
+.section {
+    padding: $section-padding-lg 0;
+    position: relative;
+}
+
+.section-body {
+    position: relative;
+    z-index: 1;
+}
+
+@include respond-between(md, lg) {
+    .section {
+        padding: $section-padding-md 0;
+    }
+}
+
+@include respond-below(md) {
+    .section {
+        padding: $section-padding-sm 0;
+    }
+}
+
+@include respond-below(sm) {
+    .section {
+        padding: $section-padding-xs 0;
+    }
+}
+
+/* Other Font
+-------------------------------------------------- */
+.other-font {
+    font-family: $other-font;
+}
+
+/* misc
+-------------------------------------------------- */
+.object-cover {
+    object-fit: cover;
+
+}
+
+
+/* dropzone
+-------------------------------------------------- */
+
+.dropzone {
+    padding: 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    min-height: 36px;
+    transition: all 150ms ease-in-out;
+    height: auto !important;
+
+    button {
+        cursor: pointer;
+    }
+
+    input {
+
+        &[type=submit],
+        &[type=button] {
+            cursor: pointer;
+        }
+    }
+
+    a.fileinput-button.dz-clickable {
+        cursor: pointer;
+
+        span {
+            cursor: pointer;
+        }
+    }
+
+    .dz-message {
+        float: left;
+        margin: 0;
+        line-height: 36px;
+        margin-left: 1rem;
+        color: #868E9B;
+    }
+
+    &.dz-clickable.dz-drag-hover {
+        transition: all 150ms ease-in-out;
+        min-height: 150px !important;
+        background: #f8f8f8;
+
+        .dz-message {
+            display: hidden;
+            float: none;
+            margin: 57px auto;
+            line-height: 36px;
+            margin-left: 1rem;
+            color: #868E9B;
+            pointer-events: none;
+        }
+    }
+}
